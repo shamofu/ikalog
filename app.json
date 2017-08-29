@@ -1,0 +1,12 @@
+{
+    "name": "ikalog",
+    "description": "ikalog is a data logger for splatoon 2.",
+    "repository": "https://github.com/shamofu/ikalog",
+    "env": {
+        "IKSM_SESSION": {
+            "description": "",
+            "value": ""
+        }
+    },
+    "addons": ["scheduler:standard", "mongolab:sandbox"]
+}
