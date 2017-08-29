@@ -1,1 +1,1 @@
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://github.com/shamofu/ikalog)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/shamofu/ikalog)
