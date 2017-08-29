@@ -22,20 +22,21 @@ db.once('open', async function() {
         const battleSchema = mongoose.Schema({ data: Object });
         const Battles = mongoose.model('Battles', battleSchema);
         for (let elem of res['data']['results'].reverse()) {
-            console.log(`checking ${elem['battle_number']}`);
-            let battle = await Battles.findOne({'data.battle_number': elem['battle_number']}).exec();
+            const battle_number = elem['battle_number'];
+            console.log(`checking ${battle_number}`);
+            let battle = await Battles.findOne({'data.battle_number': battle_number}).exec();
             if (!battle) {
-                console.log(` storing ${elem['battle_number']}`);
-                const eachRes = await api.get(`results/${parseInt(elem['battle_number'])}`);
+                console.log(` storing ${battle_number}`);
+                const eachRes = await api.get(`results/${battle_number}`);
                 if (eachRes['status'] == 200) {
                     battle = new Battles({ data: eachRes['data'] });
                     await battle.save();
-                    console.log(`  stored ${elem['battle_number']}`);
+                    console.log(`  stored ${battle_number}`);
                 } else {
-                    console.log(`  failed ${elem['battle_number']}`);
+                    console.log(`  failed ${battle_number}`);
                 }
             } else {
-                console.log(`aborting ${elem['battle_number']}`);
+                console.log(`aborting ${battle_number}`);
             }
         }
     }
