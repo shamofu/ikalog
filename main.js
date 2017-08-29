@@ -7,7 +7,8 @@ mongoose.Promise = global.Promise;
 const splaNet_url = 'https://app.splatoon2.nintendo.net';
 const api = axios.create({
     baseURL: `${splaNet_url}/api/`,
-    headers: {'Cookie': `iksm_session=${process.env.IKSM_SESSION}`}
+    headers: {'Cookie': `iksm_session=${process.env.IKSM_SESSION}`},
+    validateStatus: null
 });
 
 mongoose.connect(process.env.MONGODB_URI, {
