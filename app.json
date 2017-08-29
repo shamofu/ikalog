@@ -8,5 +8,11 @@
             "value": ""
         }
     },
-    "addons": ["scheduler:standard", "mongolab:sandbox"]
+    "addons": ["scheduler:standard", "mongolab:sandbox"],
+    "formation": {
+        "web": {
+          "quantity": 0,
+          "size": "free"
+        }
+    }
 }
