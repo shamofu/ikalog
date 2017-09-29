@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/shamofu/ikalog#readme",
   "devDependencies": {
-    "eslint": "^4.6.1"
+    "eslint": "^4.7.2"
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "mongoose": "^4.11.10",
+    "mongoose": "^4.11.13",
     "dotenv": "^4.0.0"
   },
   "engines": {
