@@ -1,18 +1,17 @@
 {
-    "name": "ikalog",
-    "description": "ikalog is a data logger for splatoon 2.",
-    "repository": "https://github.com/shamofu/ikalog",
-    "env": {
-        "IKSM_SESSION": {
-            "description": "iksm_session",
-            "value": ""
-        }
-    },
-    "addons": ["scheduler:standard", "mongolab:sandbox"],
-    "formation": {
-        "web": {
-          "quantity": 0,
-          "size": "free"
-        }
+  "name": "ikalog",
+  "description": "ikalog is a data logger for splatoon 2.",
+  "repository": "https://github.com/shamofu/ikalog",
+  "env": {
+    "IKSM_SESSION": {
+      "required": true
     }
+  },
+  "addons": ["scheduler:standard", "mongolab:sandbox"],
+  "formation": {
+    "web": {
+      "quantity": 0,
+      "size": "free"
+    }
+  }
 }
