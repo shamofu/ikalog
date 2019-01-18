@@ -4,7 +4,7 @@
     "repository": "https://github.com/shamofu/ikalog",
     "env": {
         "IKSM_SESSION": {
-            "description": "",
+            "description": "iksm_session",
             "value": ""
         }
     },
