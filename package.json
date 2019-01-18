@@ -1,6 +1,6 @@
 {
   "name": "ikalog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ikalog is a data logger for splatoon 2.",
   "main": "main.js",
   "scripts": {
