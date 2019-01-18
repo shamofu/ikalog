@@ -1,8 +1,6 @@
 require('dotenv').config();
 const axios = require('axios');
 const mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
-
 
 const splaNet_url = 'https://app.splatoon2.nintendo.net';
 const api = axios.create({
